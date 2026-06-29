@@ -533,3 +533,148 @@ class Dataset_Pred(Dataset):
 
     def inverse_transform(self, data):
         return self.scaler.inverse_transform(data)
+
+
+
+class Dataset_JLAB(Dataset):
+    def __init__(self, root_path, flag='train', size=None,
+                 features='S', data_path='jlab.csv',
+                 target='OT', scale=True, inverse=False, timeenc=0,
+                 freq='h', cols=None, bkg_sensor=['DATE', 'BLA', 'IBC1H04CRCUR2', 'MMSHLAE', ],
+                 sensor=['rad48_p1', 'rad48_p2', 'rad29_p2']):
+        # size [seq_len, label_len, pred_len]
+        # info
+        if size == None:
+            self.seq_len = 24 * 4 * 4
+            self.label_len = 24 * 4
+            self.pred_len = 24 * 4
+        else:
+            self.seq_len = size[0]
+            self.label_len = size[1]
+            self.pred_len = size[2]
+        # init
+        assert flag in ['train', 'val', 'test1', 'test2', 'test3']
+        type_map = {'train': 1, 'val': 0, 'test1': 0, 'test2': 1, 'test3': 2}
+        self.set_type = type_map[flag]
+
+        self.features = features
+        self.target = target
+        self.scale = scale
+        self.inverse = inverse
+        self.timeenc = timeenc
+        self.freq = freq
+        self.cols = cols
+        self.root_path = root_path
+        self.data_path = data_path
+        self.bkg_sensor = bkg_sensor
+        self.sensor = sensor
+        self.__read_data__()
+
+    def __read_data__(self):
+        self.scaler = StandardScaler()  # StandardScaler(), MaxAbsScaler(), MinMaxScaler()
+        df_raw = pd.read_csv(os.path.join(self.root_path,
+                                          self.data_path))
+        '''
+        df_raw.columns: ['date', ...(other features), target feature]
+        '''
+        # cols = list(df_raw.columns);
+        # if self.cols:
+        #     cols=self.cols.copy()
+        #     cols.remove(self.target)
+        # else:
+        #     cols = list(df_raw.columns); cols.remove(self.target); cols.remove('date')
+        #     cols = list(df_raw.columns)
+
+        # read 'DATE', 'IBC1H04CRCUR2', 'MMSHLAE', 'rad48_p1' columns
+        bkg_sensor = self.bkg_sensor
+        train_sensor = self.sensor
+        # print('bkg_sensor: ', bkg_sensor)
+        # print('sensor: ', train_sensor)
+        df_raw = df_raw[bkg_sensor + train_sensor]
+        # print the shape of df_raw
+        print('df_raw.shape: ', df_raw.shape)
+        df_raw = df_raw.fillna(0)
+
+        #2018
+        border1s = [300, 2000, 6500]
+        border2s = [1500, 3100, 7900]
+
+        #2017
+        # border1s = [1140, 8280, 8280]
+        # border2s = [1640, 8400, 8400]
+
+
+        #2016
+        # border1s = [850, 2110, 2110]
+        # border2s = [1650, 2660, 2660]
+
+
+        border1 = border1s[self.set_type]
+        border2 = border2s[self.set_type]
+
+        # if self.features == 'M' or self.features == 'MS':
+        cols_data = df_raw.columns[1:]
+        df_data = df_raw[cols_data]
+        # elif self.features == 'S':
+        #     df_data = df_raw[[self.target]]
+
+        train_data = df_data[border1s[1]:border2s[1]]
+
+        self.scaler.fit(train_data.values)
+        # print(self.scaler.mean)
+        # print(self.scaler.std)
+
+        if self.scale:
+            # train_data = df_data[border1s[0]:border2s[0]]
+            # self.scaler.fit(train_data.values)
+            data = self.scaler.transform(df_data.values)
+        else:
+            data = df_data.values
+
+        df_stamp = df_raw['DATE'][border1:border2]
+        df_stamp['date'] = pd.to_datetime(df_stamp)
+
+        data_stamp = time_features(df_stamp, timeenc=self.timeenc, freq=self.freq)
+
+        self.data_x = data[border1:border2]
+
+        if self.inverse:
+            self.data_y = df_data.values[border1:border2]
+        else:
+            self.data_y = data[border1:border2]
+
+        self.data_stamp = data_stamp
+
+        # print('In the {} set, data_stamp shape: '.format(self.set_type+1), self.data_stamp.shape)
+        # print('In the {} set, data_x shape: '.format(self.set_type+1), self.data_x.shape)
+        # print('In the {} set, data_y shape: '.format(self.set_type+1), self.data_y.shape)
+        # print('Get data from {} to {}'.format(border1, border2))
+
+    def __getitem__(self, index):
+        s_begin = index
+        s_end = s_begin + self.seq_len
+        r_begin = s_end - self.label_len
+        r_end = r_begin + self.label_len + self.pred_len
+
+        seq_x = self.data_x[s_begin:s_end]
+        if self.inverse:
+            seq_y = np.concatenate(
+                [self.data_x[r_begin:r_begin + self.label_len], self.data_y[r_begin + self.label_len:r_end]], 0)
+        else:
+            seq_y = self.data_y[r_begin:r_end]
+
+        # print('seq_x: ', seq_x.shape)
+        # print(seq_x)
+        # print('seq_y: ', seq_y.shape)
+        # print(seq_y)
+
+        seq_x_mark = self.data_stamp[s_begin:s_end]
+        seq_y_mark = self.data_stamp[r_begin:r_end]
+
+        return seq_x, seq_y, seq_x_mark, seq_y_mark
+
+    def __len__(self):
+        return len(self.data_x) - self.seq_len - self.pred_len + 1
+
+    def inverse_transform(self, data):
+        return self.scaler.inverse_transform(data)
