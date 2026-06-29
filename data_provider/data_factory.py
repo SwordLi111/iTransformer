@@ -10,6 +10,7 @@ data_dict = {
     'Solar': Dataset_Solar,
     'PEMS': Dataset_PEMS,
     'custom': Dataset_Custom,
+    'jlab': Dataset_JLAB,
 }
 
 
@@ -20,7 +21,7 @@ def data_provider(args, flag):
     if flag == 'test':
         shuffle_flag = False
         drop_last = True
-        batch_size = 1  # bsz=1 for evaluation
+        batch_size = args.batch_size  # bsz=1 for evaluation
         freq = args.freq
     elif flag == 'pred':
         shuffle_flag = False
