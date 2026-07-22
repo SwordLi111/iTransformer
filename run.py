@@ -3,7 +3,7 @@ import torch
 from experiments.exp_long_term_forecasting import Exp_Long_Term_Forecast
 from experiments.exp_long_term_forecasting_partial import Exp_Long_Term_Forecast_Partial
 from experiments.exp_fat import Exp_FAT_Forecast
-from experiments.exp_vwat import Exp_Variant_Weight_Forecast
+from experiments.exp_overlap_pilot import Exp_Overlap_Pilot
 import random
 import numpy as np
 
@@ -79,8 +79,8 @@ if __name__ == '__main__':
     parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')
 
     # iTransformer
-    parser.add_argument('--exp_name', type=str, required=False, default='MTSF',
-                        help='experiemnt name, options:[MTSF,FAT, partial_train, VWAT, SF]')
+    parser.add_argument('--exp_name', type=str, required=False, default='OP',
+                        help='experiemnt name, options:[MTSF,FAT, partial_train, OP]')
     parser.add_argument('--channel_independence', type=bool, default=False, help='whether to use channel_independence mechanism')
     parser.add_argument('--inverse', action='store_true', help='inverse output data', default=False)
     parser.add_argument('--class_strategy', type=str, default='projection', help='projection/average/cls_token')
@@ -107,8 +107,8 @@ if __name__ == '__main__':
         Exp = Exp_Long_Term_Forecast_Partial
     elif args.exp_name == 'FAT': # multivariate time series forecasting
         Exp = Exp_FAT_Forecast
-    elif args.exp_name == 'VWAT': # multivariate time series forecasting
-        Exp = Exp_Variant_Weight_Forecast
+    elif args.exp_name == 'OP': # multivariate time series forecasting
+        Exp = Exp_Overlap_Pilot
     else: # MTSF: multivariate time series forecasting
         Exp = Exp_Long_Term_Forecast
 
