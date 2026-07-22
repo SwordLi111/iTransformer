@@ -20,6 +20,7 @@ python -u run.py \
   --d_model 512 \
   --d_ff 512 \
   --learning_rate 0.0005 \
+  --train_epochs 20 \
   --itr 1
 
 python -u run.py \

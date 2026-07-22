@@ -1,0 +1,430 @@
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.1, α=0.01, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.713188, MSE=0.833162
+Degrade: MAE +198.38%, MSE +465.84%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.1, α=0.01, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.713188, MSE=0.833162
+Degrade: MAE +198.38%, MSE +465.84%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.597732, MSE=0.629973
+Degrade: MAE +150.08%, MSE +327.84%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.597732, MSE=0.629973
+Degrade: MAE +150.08%, MSE +327.84%
+
+Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.205541, MSE=0.085746
+PGD:   MAE=0.360375, MSE=0.263042
+Degrade: MAE +75.33%, MSE +206.77%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.235492, MSE=0.203369
+PGD:   MAE=0.759242, MSE=0.753026
+Degrade: MAE +222.41%, MSE +270.28%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.216219, MSE=0.176106
+PGD:   MAE=0.571945, MSE=0.606530
+Degrade: MAE +164.52%, MSE +244.41%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.247930, MSE=0.152990
+PGD:   MAE=0.386099, MSE=0.301877
+Degrade: MAE +55.73%, MSE +97.32%
+
+Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.209094, MSE=0.086373
+PGD:   MAE=0.320219, MSE=0.228410
+Degrade: MAE +53.15%, MSE +164.45%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.223174, MSE=0.181122
+PGD:   MAE=0.529218, MSE=0.527560
+Degrade: MAE +137.13%, MSE +191.27%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.247930, MSE=0.152990
+PGD:   MAE=0.386099, MSE=0.301877
+Degrade: MAE +55.73%, MSE +97.32%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.240148, MSE=0.147554
+PGD:   MAE=0.425166, MSE=0.369541
+Degrade: MAE +77.04%, MSE +150.45%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.242638, MSE=0.150389
+PGD:   MAE=0.441268, MSE=0.394854
+Degrade: MAE +81.86%, MSE +162.56%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.216872, MSE=0.178132
+PGD:   MAE=0.561095, MSE=0.584012
+Degrade: MAE +158.72%, MSE +227.85%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.357801, MSE=0.259160
+PGD:   MAE=0.395194, MSE=0.298830
+Degrade: MAE +10.45%, MSE +15.31%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.240630, MSE=0.147758
+PGD:   MAE=0.418659, MSE=0.354335
+Degrade: MAE +73.98%, MSE +139.81%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.240630, MSE=0.147758
+PGD:   MAE=0.418659, MSE=0.354335
+Degrade: MAE +73.98%, MSE +139.81%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.240630, MSE=0.147758
+PGD:   MAE=0.418659, MSE=0.354335
+Degrade: MAE +73.98%, MSE +139.81%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.357801, MSE=0.259160
+PGD:   MAE=0.395194, MSE=0.298830
+Degrade: MAE +10.45%, MSE +15.31%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.240630, MSE=0.147758
+PGD:   MAE=0.418659, MSE=0.354335
+Degrade: MAE +73.98%, MSE +139.81%
+
+Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.208377, MSE=0.087852
+PGD:   MAE=0.351834, MSE=0.255959
+Degrade: MAE +68.84%, MSE +191.35%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.245720, MSE=0.152734
+PGD:   MAE=0.422806, MSE=0.365419
+Degrade: MAE +72.07%, MSE +139.25%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.243234, MSE=0.203084
+PGD:   MAE=0.544484, MSE=0.545933
+Degrade: MAE +123.85%, MSE +168.82%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.406744, MSE=0.288799
+PGD:   MAE=0.495208, MSE=0.366955
+Degrade: MAE +21.75%, MSE +27.06%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.245671, MSE=0.152701
+PGD:   MAE=0.422719, MSE=0.365224
+Degrade: MAE +72.07%, MSE +139.18%
+
+Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.217010, MSE=0.094526
+PGD:   MAE=0.404923, MSE=0.311201
+Degrade: MAE +86.59%, MSE +229.22%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.242284, MSE=0.201864
+PGD:   MAE=0.554061, MSE=0.568282
+Degrade: MAE +128.68%, MSE +181.52%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.240630, MSE=0.147758
+PGD:   MAE=0.418659, MSE=0.354335
+Degrade: MAE +73.98%, MSE +139.81%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.293067, MSE=0.226661
+PGD:   MAE=0.498495, MSE=0.400509
+Degrade: MAE +70.10%, MSE +76.70%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.247654, MSE=0.152736
+PGD:   MAE=0.386015, MSE=0.302160
+Degrade: MAE +55.87%, MSE +97.83%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.238363, MSE=0.145045
+PGD:   MAE=0.420061, MSE=0.354380
+Degrade: MAE +76.23%, MSE +144.32%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.248734, MSE=0.155225
+PGD:   MAE=0.429036, MSE=0.368255
+Degrade: MAE +72.49%, MSE +137.24%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.248358, MSE=0.155289
+PGD:   MAE=0.423818, MSE=0.355514
+Degrade: MAE +70.65%, MSE +128.94%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.267244, MSE=0.168258
+PGD:   MAE=0.401336, MSE=0.320369
+Degrade: MAE +50.18%, MSE +90.40%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.250100, MSE=0.153818
+PGD:   MAE=0.384538, MSE=0.298891
+Degrade: MAE +53.75%, MSE +94.31%
+
+Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.210615, MSE=0.087213
+PGD:   MAE=0.325312, MSE=0.231386
+Degrade: MAE +54.46%, MSE +165.31%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.366128, MSE=0.268359
+PGD:   MAE=0.391117, MSE=0.295298
+Degrade: MAE +6.82%, MSE +10.04%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.224160, MSE=0.177581
+PGD:   MAE=0.398672, MSE=0.359072
+Degrade: MAE +77.85%, MSE +102.20%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.223488, MSE=0.180065
+PGD:   MAE=0.478466, MSE=0.460366
+Degrade: MAE +114.09%, MSE +155.67%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.249792, MSE=0.152618
+PGD:   MAE=0.384609, MSE=0.299746
+Degrade: MAE +53.97%, MSE +96.40%
+
+Exchange_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.218365, MSE=0.095854
+PGD:   MAE=0.335968, MSE=0.242726
+Degrade: MAE +53.86%, MSE +153.23%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.237561, MSE=0.184199
+PGD:   MAE=0.446852, MSE=0.403153
+Degrade: MAE +88.10%, MSE +118.87%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.313543, MSE=0.240849
+PGD:   MAE=0.394495, MSE=0.317757
+Degrade: MAE +25.82%, MSE +31.93%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.252102, MSE=0.154879
+PGD:   MAE=0.381211, MSE=0.351668
+Degrade: MAE +51.21%, MSE +127.06%
+
+jlab_48_48_iTransformer_jlab_M_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.442914, MSE=0.588319
+PGD:   MAE=0.777187, MSE=0.923911
+Degrade: MAE +75.47%, MSE +57.04%
+
+jlab_48_48_iTransformer_jlab_M_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.442914, MSE=0.588319
+PGD:   MAE=0.777187, MSE=0.923911
+Degrade: MAE +75.47%, MSE +57.04%
+
+jlab_48_48_iTransformer_jlab_M_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.577214, MSE=0.798049
+PGD:   MAE=0.695721, MSE=0.937133
+Degrade: MAE +20.53%, MSE +17.43%
+
+jlab_24_24_iTransformer_jlab_M_ft10_sl10_ll3_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.302038, MSE=0.411402
+PGD:   MAE=0.756944, MSE=0.885962
+Degrade: MAE +150.61%, MSE +115.35%
+
+jlab_24_24_iTransformer_jlab_M_ft10_sl10_ll3_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.302038, MSE=0.411402
+PGD:   MAE=0.756944, MSE=0.885962
+Degrade: MAE +150.61%, MSE +115.35%
+
+jlab_24_24_iTransformer_jlab_MS_ft10_sl10_ll3_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.314303, MSE=0.320726
+PGD:   MAE=0.861641, MSE=0.971299
+Degrade: MAE +174.14%, MSE +202.84%
+
+jlab_24_24_iTransformer_jlab_MS_ft24_sl24_ll24_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.264240, MSE=0.159977
+PGD:   MAE=0.676583, MSE=0.556418
+Degrade: MAE +156.05%, MSE +247.81%
+
+jlab_24_24_iTransformer_jlab_MS_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.297879, MSE=0.177928
+PGD:   MAE=0.680331, MSE=0.559345
+Degrade: MAE +128.39%, MSE +214.37%
+
+jlab_24_24_iTransformer_jlab_MS_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.302894, MSE=0.189794
+PGD:   MAE=0.665551, MSE=0.533738
+Degrade: MAE +119.73%, MSE +181.22%
+
+jlab_24_24_iTransformer_jlab_MS_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.320449, MSE=0.208784
+PGD:   MAE=0.658068, MSE=0.520747
+Degrade: MAE +105.36%, MSE +149.42%
+
+jlab_24_24_iTransformer_jlab_MS_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.315108, MSE=0.202702
+PGD:   MAE=0.656948, MSE=0.519215
+Degrade: MAE +108.48%, MSE +156.15%
+
+jlab_24_24_iTransformer_jlab_MS_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.339883, MSE=0.232639
+PGD:   MAE=0.629568, MSE=0.480373
+Degrade: MAE +85.23%, MSE +106.49%
+
+jlab_24_24_iTransformer_jlab_MS_ft48_sl48_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.341973, MSE=0.236186
+PGD:   MAE=0.624827, MSE=0.474168
+Degrade: MAE +82.71%, MSE +100.76%
+
+jlab_48_48_iTransformer_jlab_MS_ft48_sl24_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.337383, MSE=0.228714
+PGD:   MAE=0.626077, MSE=0.475152
+Degrade: MAE +85.57%, MSE +107.75%
+
+jlab_48_48_iTransformer_jlab_MS_ft48_sl24_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.339216, MSE=0.232521
+PGD:   MAE=0.620800, MSE=0.468852
+Degrade: MAE +83.01%, MSE +101.64%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.254431, MSE=0.217732
+PGD:   MAE=0.539219, MSE=0.533621
+Degrade: MAE +111.93%, MSE +145.08%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.444599, MSE=0.325435
+PGD:   MAE=0.388415, MSE=0.289719
+Degrade: MAE -12.64%, MSE -10.97%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.248331, MSE=0.152104
+PGD:   MAE=0.381202, MSE=0.302036
+Degrade: MAE +53.51%, MSE +98.57%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.243534, MSE=0.206172
+PGD:   MAE=0.538433, MSE=0.535305
+Degrade: MAE +121.09%, MSE +159.64%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.237418, MSE=0.189333
+PGD:   MAE=0.397707, MSE=0.345946
+Degrade: MAE +67.51%, MSE +82.72%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.372577, MSE=0.273025
+PGD:   MAE=0.399881, MSE=0.317082
+Degrade: MAE +7.33%, MSE +16.14%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.256697, MSE=0.156517
+PGD:   MAE=0.384493, MSE=0.312155
+Degrade: MAE +49.78%, MSE +99.44%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.216219, MSE=0.176106
+PGD:   MAE=0.571945, MSE=0.606530
+Degrade: MAE +164.52%, MSE +244.41%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (ε=0.03137254901960784, α=0.00784313725490196, iter=10)
+Clean: MAE=0.216219, MSE=0.176106
+PGD:   MAE=0.571945, MSE=0.606530
+Degrade: MAE +164.52%, MSE +244.41%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.5, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.216219, MSE=0.176106
+PGD:   MAE=2.195589, MSE=9.052054
+Degrade: MAE +915.45%, MSE +5040.12%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.5, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=4.648529, MSE=31.237753
+Degrade: MAE +1844.82%, MSE +21114.93%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.662968, MSE=0.780394
+Degrade: MAE +177.37%, MSE +430.00%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.662968, MSE=0.780394
+Degrade: MAE +177.37%, MSE +430.00%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.216219, MSE=0.176106
+PGD:   MAE=0.364387, MSE=0.453828
+Degrade: MAE +68.53%, MSE +157.70%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.239021, MSE=0.147244
+PGD:   MAE=0.662968, MSE=0.780394
+Degrade: MAE +177.37%, MSE +430.00%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.216219, MSE=0.176106
+PGD:   MAE=0.364387, MSE=0.453828
+Degrade: MAE +68.53%, MSE +157.70%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.235492, MSE=0.203369
+PGD:   MAE=0.670374, MSE=1.378373
+Degrade: MAE +184.67%, MSE +577.77%
+
+ECL_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.236203, MSE=0.143333
+PGD:   MAE=0.278129, MSE=0.183913
+Degrade: MAE +17.75%, MSE +28.31%
+
+jlab_48_48_iTransformer_jlab_MS_ft48_sl24_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.305663, MSE=0.195388
+PGD:   MAE=0.332564, MSE=0.218161
+Degrade: MAE +8.80%, MSE +11.66%
+
+jlab_48_48_iTransformer_jlab_MS_ft48_sl24_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.305663, MSE=0.195388
+PGD:   MAE=0.332564, MSE=0.218161
+Degrade: MAE +8.80%, MSE +11.66%
+
+jlab_48_48_iTransformer_jlab_MS_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.315744, MSE=0.195351
+PGD:   MAE=0.329594, MSE=0.208507
+Degrade: MAE +4.39%, MSE +6.73%
+
+weather_96_96_iTransformer_custom_M_ft96_sl48_ll96_pl512_dm8_nh3_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.219867, MSE=0.178061
+PGD:   MAE=0.258022, MSE=0.218235
+Degrade: MAE +17.35%, MSE +22.56%
+
+jlab_48_48_iTransformer_jlab_MS_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.315744, MSE=0.195351
+PGD:   MAE=0.329594, MSE=0.208507
+Degrade: MAE +4.39%, MSE +6.73%
+
+solar_96_96_iTransformer_Solar_M_ft96_sl48_ll96_pl512_dm8_nh2_el1_dl512_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.233575, MSE=0.201661
+PGD:   MAE=0.307421, MSE=0.294605
+Degrade: MAE +31.62%, MSE +46.09%
+
+jlab_48_48_iTransformer_jlab_MS_ft96_sl48_ll96_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.504928, MSE=0.493758
+PGD:   MAE=0.526720, MSE=0.532387
+Degrade: MAE +4.32%, MSE +7.82%
+
+jlab_48_48_iTransformer_jlab_MS_ft48_sl24_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.492965, MSE=0.543753
+PGD:   MAE=0.512527, MSE=0.579160
+Degrade: MAE +3.97%, MSE +6.51%
+
+jlab_48_48_iTransformer_jlab_MS_ft48_sl24_ll48_pl128_dm8_nh2_el1_dl128_df1_fctimeF_ebTrue_dtExp_projection_0 (eta_ratio=0.1, alpha_ratio=0.1, iter=10)
+Clean: MAE=0.495583, MSE=0.548673
+PGD:   MAE=0.549182, MSE=0.652840
+Degrade: MAE +10.82%, MSE +18.99%
+

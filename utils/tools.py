@@ -9,20 +9,23 @@ plt.switch_backend('agg')
 
 
 def adjust_learning_rate(optimizer, epoch, args):
-    # lr = args.learning_rate * (0.2 ** (epoch // 2))
     if args.lradj == 'type1':
-        lr_adjust = {epoch: args.learning_rate * (0.5 ** ((epoch - 1) // 1))}
+        # 每 5 个 epoch 衰减为 0.5 倍
+        lr = args.learning_rate * (0.5 ** ((epoch - 1) // 6))
     elif args.lradj == 'type2':
-        lr_adjust = {
-            2: 5e-5, 4: 1e-5, 6: 5e-6, 8: 1e-6,
-            10: 5e-7, 15: 1e-7, 20: 5e-8
-        }
-    if epoch in lr_adjust.keys():
-        lr = lr_adjust[epoch]
-        for param_group in optimizer.param_groups:
-            param_group['lr'] = lr
-        print('Updating learning rate to {}'.format(lr))
+        # 每 10 个 epoch 衰减为 0.5 倍
+        lr = args.learning_rate * (0.5 ** ((epoch - 1) // 10))
+    elif args.lradj == 'cosine':
+        # cosine annealing
+        lr = args.learning_rate * 0.5 * (1 + np.cos(np.pi * epoch / args.train_epochs))
+    elif args.lradj == 'constant':
+        lr = args.learning_rate
+    else:
+        lr = args.learning_rate
 
+    for param_group in optimizer.param_groups:
+        param_group['lr'] = lr
+    print('Updating learning rate to {}'.format(lr))
 
 class EarlyStopping:
     def __init__(self, patience=7, verbose=False, delta=0):

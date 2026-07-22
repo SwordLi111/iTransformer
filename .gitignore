@@ -129,3 +129,28 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# 模型权重和检查点
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# 实验结果和输出
+results/
+test_results/
+*.npy
+*.npz
+
+# 数据集
+dataset/
+data/
+*.csv
+
+# SLURM 日志
+slurm-*.out
+*.err
+
+# VSCode
+.vscode/

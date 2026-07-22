@@ -7,7 +7,7 @@ python -u run.py \
   --root_path ./dataset/electricity/ \
   --data_path electricity.csv \
   --model_id ECL_96_96 \
-  --model $model_name \
+  --model iTransformer \
   --data custom \
   --features M \
   --seq_len 96 \
@@ -20,6 +20,7 @@ python -u run.py \
   --d_model 512 \
   --d_ff 512 \
   --batch_size 16 \
+  --train_epochs 20 \
   --learning_rate 0.0005 \
   --itr 1
 

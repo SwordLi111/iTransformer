@@ -7,10 +7,11 @@ python -u run.py \
   --root_path ./dataset/weather/ \
   --data_path weather.csv \
   --model_id weather_96_96 \
-  --model $model_name \
+  --model iTransformer \
   --data custom \
   --features M \
   --seq_len 96 \
+  --train_epochs 20 \
   --pred_len 96 \
   --e_layers 3 \
   --enc_in 21 \

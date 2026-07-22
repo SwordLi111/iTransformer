@@ -2,8 +2,12 @@ import argparse
 import torch
 from experiments.exp_long_term_forecasting import Exp_Long_Term_Forecast
 from experiments.exp_long_term_forecasting_partial import Exp_Long_Term_Forecast_Partial
+from experiments.exp_fat import Exp_FAT_Forecast
+from experiments.exp_vwat import Exp_Variant_Weight_Forecast
 import random
 import numpy as np
+
+
 
 if __name__ == '__main__':
     fix_seed = 2023
@@ -28,7 +32,7 @@ if __name__ == '__main__':
     parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
     parser.add_argument('--freq', type=str, default='h',
                         help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h')
-    parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
+    parser.add_argument('--checkpoints', type=str, default='./checkpoints', help='location of model checkpoints')
 
     # forecasting task
     parser.add_argument('--seq_len', type=int, default=96, help='input sequence length')
@@ -59,10 +63,10 @@ if __name__ == '__main__':
     # optimization
     parser.add_argument('--num_workers', type=int, default=10, help='data loader num workers')
     parser.add_argument('--itr', type=int, default=1, help='experiments times')
-    parser.add_argument('--train_epochs', type=int, default=10, help='train epochs')
+    parser.add_argument('--train_epochs', type=int, default=20, help='train epochs')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size of train input data')
-    parser.add_argument('--patience', type=int, default=3, help='early stopping patience')
-    parser.add_argument('--learning_rate', type=float, default=0.0001, help='optimizer learning rate')
+    parser.add_argument('--patience', type=int, default=5, help='early stopping patience')
+    parser.add_argument('--learning_rate', type=float, default=0.0005, help='optimizer learning rate')
     parser.add_argument('--des', type=str, default='test', help='exp description')
     parser.add_argument('--loss', type=str, default='MSE', help='loss function')
     parser.add_argument('--lradj', type=str, default='type1', help='adjust learning rate')
@@ -76,7 +80,7 @@ if __name__ == '__main__':
 
     # iTransformer
     parser.add_argument('--exp_name', type=str, required=False, default='MTSF',
-                        help='experiemnt name, options:[MTSF, partial_train]')
+                        help='experiemnt name, options:[MTSF,FAT, partial_train, VWAT, SF]')
     parser.add_argument('--channel_independence', type=bool, default=False, help='whether to use channel_independence mechanism')
     parser.add_argument('--inverse', action='store_true', help='inverse output data', default=False)
     parser.add_argument('--class_strategy', type=str, default='projection', help='projection/average/cls_token')
@@ -101,6 +105,10 @@ if __name__ == '__main__':
 
     if args.exp_name == 'partial_train': # See Figure 8 of our paper, for the detail
         Exp = Exp_Long_Term_Forecast_Partial
+    elif args.exp_name == 'FAT': # multivariate time series forecasting
+        Exp = Exp_FAT_Forecast
+    elif args.exp_name == 'VWAT': # multivariate time series forecasting
+        Exp = Exp_Variant_Weight_Forecast
     else: # MTSF: multivariate time series forecasting
         Exp = Exp_Long_Term_Forecast
 
@@ -130,10 +138,10 @@ if __name__ == '__main__':
             exp = Exp(args)  # set experiments
             print('>>>>>>>start training : {}>>>>>>>>>>>>>>>>>>>>>>>>>>'.format(setting))
             exp.train(setting)
-
+            # exp.train_pgd(setting, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
             print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-            exp.test(setting)
-
+            # exp.test(setting)
+            exp.test_pgd(setting, test=1, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
             if args.do_predict:
                 print('>>>>>>>predicting : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
                 exp.predict(setting, True)
@@ -162,5 +170,7 @@ if __name__ == '__main__':
 
         exp = Exp(args)  # set experiments
         print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-        exp.test(setting, test=1)
+        exp.visualize_pgd_freq(setting, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
+        exp.test_pgd(setting, test=1, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
+        # exp.test(setting, test=1)
         torch.cuda.empty_cache()
