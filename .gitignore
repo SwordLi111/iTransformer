@@ -153,4 +153,5 @@ slurm-*.out
 *.err
 
 # VSCode
-.vscode/
+.vscode/results/
+slurm_*.log

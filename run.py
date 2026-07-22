@@ -2,7 +2,6 @@ import argparse
 import torch
 from experiments.exp_long_term_forecasting import Exp_Long_Term_Forecast
 from experiments.exp_long_term_forecasting_partial import Exp_Long_Term_Forecast_Partial
-from experiments.exp_fat import Exp_FAT_Forecast
 from experiments.exp_overlap_pilot import Exp_Overlap_Pilot
 import random
 import numpy as np
@@ -71,7 +70,7 @@ if __name__ == '__main__':
     parser.add_argument('--loss', type=str, default='MSE', help='loss function')
     parser.add_argument('--lradj', type=str, default='type1', help='adjust learning rate')
     parser.add_argument('--use_amp', action='store_true', help='use automatic mixed precision training', default=False)
-
+    
     # GPU
     parser.add_argument('--use_gpu', type=bool, default=True, help='use gpu')
     parser.add_argument('--gpu', type=int, default=0, help='gpu')
@@ -90,7 +89,14 @@ if __name__ == '__main__':
     parser.add_argument('--use_norm', type=int, default=True, help='use norm and denorm')
     parser.add_argument('--partial_start_index', type=int, default=0, help='the start index of variates for partial training, '
                                                                            'you can select [partial_start_index, min(enc_in + partial_start_index, N)]')
-
+    # pilot probe
+    parser.add_argument('--train_mode', type=str, default='clean',
+                    choices=['clean', 'pgd'],
+                    help='training mode: clean or pgd adversarial training')
+    parser.add_argument('--probe', type=str, default='pgd', help='pilot probe type: pgd or fgsm')
+    parser.add_argument('--probe_iter', type=int, default=10, help='PGD steps for pilot probe')
+    parser.add_argument('--eta_ratio', type=float, default=0.1, help='PGD per-element perturbation ratio')
+    parser.add_argument('--probe_alpha_ratio', type=float, default=0.1)
     args = parser.parse_args()
     args.use_gpu = True if torch.cuda.is_available() and args.use_gpu else False
 
@@ -105,8 +111,6 @@ if __name__ == '__main__':
 
     if args.exp_name == 'partial_train': # See Figure 8 of our paper, for the detail
         Exp = Exp_Long_Term_Forecast_Partial
-    elif args.exp_name == 'FAT': # multivariate time series forecasting
-        Exp = Exp_FAT_Forecast
     elif args.exp_name == 'OP': # multivariate time series forecasting
         Exp = Exp_Overlap_Pilot
     else: # MTSF: multivariate time series forecasting
@@ -137,11 +141,15 @@ if __name__ == '__main__':
 
             exp = Exp(args)  # set experiments
             print('>>>>>>>start training : {}>>>>>>>>>>>>>>>>>>>>>>>>>>'.format(setting))
-            exp.train(setting)
-            # exp.train_pgd(setting, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
+            if args.train_mode == 'pgd':
+                exp.train_pgd(setting, eta_ratio=args.eta_ratio,
+                            alpha_ratio=0.1, num_iter=10)
+            else:
+                exp.train(setting)
             print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-            # exp.test(setting)
-            exp.test_pgd(setting, test=1, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
+            exp.test_pgd(setting, test=1, eta_ratio=args.eta_ratio,
+                        alpha_ratio=0.1, num_iter=10)
+            exp.test_pgd(setting, test=1, eta_ratio=args.eta_ratio, alpha_ratio=0.1, num_iter=10)
             if args.do_predict:
                 print('>>>>>>>predicting : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
                 exp.predict(setting, True)
@@ -169,8 +177,13 @@ if __name__ == '__main__':
             args.class_strategy, ii)
 
         exp = Exp(args)  # set experiments
-        print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-        exp.visualize_pgd_freq(setting, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
-        exp.test_pgd(setting, test=1, eta_ratio=0.1, alpha_ratio=0.1, num_iter=10)
-        # exp.test(setting, test=1)
+
+        if args.exp_name == 'OP':
+            print('>>>>>>>overlap pilot : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
+            exp.eval_pilot(setting, probe=args.probe, eta_ratio=args.eta_ratio,
+               alpha_ratio=args.probe_alpha_ratio, num_iter=args.probe_iter, flag='val')
+        else:
+            print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
+            exp.test_pgd(setting, test=1, eta_ratio=args.eta_ratio, alpha_ratio=args.probe_alpha_ratio, num_iter=args.probe_iter)
+
         torch.cuda.empty_cache()
